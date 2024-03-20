@@ -1,0 +1,82 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+{% block body %}
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+<form class="form-horizontal" action="{% url 'feedbackloginfunction' %}" method="POST">
+    {% csrf_token %}
+  <fieldset>
+          {% csrf_token %}
+
+    <h1> Welcome to Feedback Page </h1>
+
+
+      <br>
+      <br>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="name">Your Sweet Name Please</label>
+      <div class="controls">
+        <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+      <br>
+
+<br>
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="comment">Comment</label>
+      <div class="controls">
+        <input type="text" id="comment" name="comment" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+
+      <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title"> Thanks For Visiting Us </h5>
+    <p class="card-text">Please Give Your Feedback</p>
+    <a href="{% url 'weatherpagecall' %}" class="btn btn-primary">Go To Check Wether</a>
+  </div>
+</div>
+
+
+<br>
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" type="submit">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+  </div>
+</div>
+</div>
+<br><br>
+<div>
+
+</div>
+{% endblock %}
+
+</html>

@@ -1,0 +1,61 @@
+
+
+
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/b1.avif' %}"class="card-img-top" alt="...">
+            <p class="card-text">Bike1</p>
+    <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/b2.avif' %}"class="card-img-top" alt="...">
+            <p class="card-text">Bike2</p>
+    <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+
+      <img src="{% static 'images/b3.avif' %}"class="card-img-top" alt="...">
+            <p class="card-text">Bike3</p>
+    <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+
+
+
+  </div>
+         </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
